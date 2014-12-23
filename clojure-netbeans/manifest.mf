@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: org.adrianwalker.clojure.netbeans
+OpenIDE-Module-Layer: org/adrianwalker/clojure/netbeans/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/adrianwalker/clojure/netbeans/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
