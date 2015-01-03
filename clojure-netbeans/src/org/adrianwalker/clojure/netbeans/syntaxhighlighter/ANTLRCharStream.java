@@ -31,7 +31,7 @@ public final class ANTLRCharStream implements CharStream {
     final int length = interval.length();
     final char[] data = new char[length];
 
-    seek(interval.a);
+    seek(start);
     int r = 0;
 
     while (r < length) {

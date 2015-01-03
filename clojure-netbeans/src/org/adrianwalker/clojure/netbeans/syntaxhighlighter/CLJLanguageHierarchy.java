@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.netbeans.api.lexer.Language;
 import org.netbeans.spi.lexer.LanguageHierarchy;
 import org.netbeans.spi.lexer.Lexer;
 import org.netbeans.spi.lexer.LexerRestartInfo;
@@ -13,7 +12,6 @@ public final class CLJLanguageHierarchy extends LanguageHierarchy<CLJTokenId> {
 
   private static List<CLJTokenId> tokens;
   private static Map<Integer, CLJTokenId> idToToken;
-  private static final Language<CLJTokenId> language = new CLJLanguageHierarchy().language();
 
   private static void init() {
 
@@ -33,10 +31,6 @@ public final class CLJLanguageHierarchy extends LanguageHierarchy<CLJTokenId> {
     }
 
     return idToToken.get(id);
-  }
-
-  public static Language<CLJTokenId> getLanguage() {
-    return language;
   }
 
   @Override

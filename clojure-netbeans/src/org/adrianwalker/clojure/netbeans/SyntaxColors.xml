@@ -8,15 +8,15 @@
   <fontcolor name="number" default="number" foreColor="FF0000"/>
   <fontcolor name="regex" default="string"/>
   <fontcolor name="keyword" default="identifier"/>
-  <fontcolor name="boolean" default="keyword"/>
+  <fontcolor name="boolean" default="keyword" foreColor="0000FF"/>
   <fontcolor name="comment" default="comment"/>
-  <fontcolor name="nil" default="keyword"/>
+  <fontcolor name="nil" default="keyword" foreColor="0000FF"/>
   <fontcolor name="param_name" default="identifier"/>
   <fontcolor name="string" default="string"/>
   <fontcolor name="character" default="char"/>
   <fontcolor name="ws" default="whitespace"/>
-  <fontcolor name="vector" default="vector" foreColor="0088FF"/>
+  <fontcolor name="vector" default="vector" foreColor="0000FF"/>
   <fontcolor name="list" default="list" foreColor="0000FF"/>
-  <fontcolor name="map" default="map" foreColor="00FFFF"/>
+  <fontcolor name="map" default="map" foreColor="0000FF"/>
 </fontscolors>
 

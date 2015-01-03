@@ -1,9 +1,11 @@
 package org.adrianwalker.clojure.netbeans.syntaxhighlighter;
 
+import org.netbeans.api.lexer.Language;
 import org.netbeans.api.lexer.TokenId;
 
 public final class CLJTokenId implements TokenId {
 
+  private static final Language<CLJTokenId> LANGUAGE = new CLJLanguageHierarchy().language();
   private final String name;
   private final String primaryCategory;
   private final int id;
@@ -13,6 +15,10 @@ public final class CLJTokenId implements TokenId {
     this.name = name;
     this.primaryCategory = primaryCategory;
     this.id = id;
+  }
+
+  public static Language<CLJTokenId> getLanguage() {
+    return LANGUAGE;
   }
 
   @Override
@@ -48,10 +54,12 @@ public final class CLJTokenId implements TokenId {
     if (obj == null) {
       return false;
     }
+
     if (getClass() != obj.getClass()) {
       return false;
     }
-    final CLJTokenId other = (CLJTokenId) obj;
+
+    CLJTokenId other = (CLJTokenId) obj;
     if (this.id != other.id) {
       return false;
     }

@@ -6,15 +6,16 @@ import org.netbeans.api.lexer.LanguagePath;
 import org.netbeans.api.lexer.Token;
 import org.netbeans.spi.lexer.LanguageEmbedding;
 import org.netbeans.spi.lexer.LanguageProvider;
+import org.openide.util.lookup.ServiceProvider;
 
-@org.openide.util.lookup.ServiceProvider(service = org.netbeans.spi.lexer.LanguageProvider.class)
+@ServiceProvider(service = LanguageProvider.class)
 public final class CLJLanguageProvider extends LanguageProvider {
 
   @Override
   public Language<?> findLanguage(final String mimeType) {
 
     if ("text/x-clj".equals(mimeType)) {
-      return new CLJLanguageHierarchy().language();
+      return CLJTokenId.getLanguage();
     }
 
     return null;

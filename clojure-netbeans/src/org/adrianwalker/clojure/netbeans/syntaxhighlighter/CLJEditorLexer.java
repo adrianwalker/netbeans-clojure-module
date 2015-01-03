@@ -7,8 +7,8 @@ import org.netbeans.spi.lexer.LexerRestartInfo;
 
 public final class CLJEditorLexer implements Lexer<CLJTokenId> {
 
-  private LexerRestartInfo<CLJTokenId> info;
-  private ClojureLexer lexer;
+  private final LexerRestartInfo<CLJTokenId> info;
+  private final ClojureLexer lexer;
 
   public CLJEditorLexer(final LexerRestartInfo<CLJTokenId> info) {
 
