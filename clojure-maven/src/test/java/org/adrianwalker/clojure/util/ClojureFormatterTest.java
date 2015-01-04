@@ -20,15 +20,13 @@ public class ClojureFormatterTest {
 
     String prettyCode = ClojureFormatter.prettyPrint(code);
 
-    System.out.println("*\n" + prettyCode + "\n*");
-
     Assert.assertEquals("(defn cl-format\n"
-            + "   \"An implementation of a Common Lisp compatible format function\"\n"
-            + "   [stream format-in & args]\n"
-            + "   (let [compiled-format (if (string? format-in)\n"
-            + "                           (compile-format format-in)\n"
-            + "                           format-in)\n"
-            + "         navigator (init-navigator args)]\n"
-            + "     (execute-format stream compiled-format navigator)))", prettyCode);
+            + "  \"An implementation of a Common Lisp compatible format function\"\n"
+            + "  [stream format-in & args]\n"
+            + "  (let [compiled-format (if (string? format-in)\n"
+            + "                          (compile-format format-in)\n"
+            + "                          format-in)\n"
+            + "        navigator (init-navigator args)]\n"
+            + "    (execute-format stream compiled-format navigator)))\n", prettyCode);
   }
 }

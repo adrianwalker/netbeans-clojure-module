@@ -9,6 +9,12 @@
   (with-out-str
     (with-pprint-dispatch code-dispatch (pprint code))))
 
-(defn -prettyPrint [code]
-   (def prettyCode (prettyPrint (read-string (str "(" code ")"))))
-   (subs prettyCode 1 (- (count prettyCode) 2)))
+(defn -prettyPrint [s]
+  (def codeVector (read-string (str "[" s "]")))
+  (def prettyCode "")
+  (doseq [code codeVector]
+    (if (> (count prettyCode) 0)
+      (def prettyCode (str prettyCode "\n")))
+    (def prettyCode (str prettyCode (prettyPrint code))))
+  prettyCode
+)

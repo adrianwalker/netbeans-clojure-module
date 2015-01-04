@@ -2,7 +2,6 @@ package org.adrianwalker.clojure.netbeans.parser;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
-import javax.swing.text.Element;
 import org.adrianwalker.clojure.util.ClojureFormatter;
 import org.netbeans.modules.editor.indent.spi.Context;
 import org.netbeans.modules.editor.indent.spi.ExtraLock;
@@ -18,8 +17,7 @@ public final class CLJReformatTask implements ReformatTask {
 
   @Override
   public void reformat() throws BadLocationException {
-
-    Document document = context.document();
+    final Document document = context.document();
     String code = document.getText(0, document.getLength());
     String prettyCode = ClojureFormatter.prettyPrint(code);
     document.remove(0, document.getLength());
